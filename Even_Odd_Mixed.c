@@ -11,7 +11,6 @@ int main(){
         else{
             od=od+1;
         }
-        
         n=n/10;
     }
     if(d==ed){
@@ -23,4 +22,5 @@ int main(){
     else{
         printf("Mixed");
     }
+    
 }
