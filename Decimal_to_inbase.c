@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 int main()
 {
@@ -32,5 +31,3 @@ else
 printf("%d",c);
  } 
 }
-
-
