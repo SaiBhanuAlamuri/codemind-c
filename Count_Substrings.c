@@ -1,27 +1,26 @@
-
 #include<stdio.h>
 int main()
-{
-int m,n;
-scanf("%d",&n);
-for(m=0;m<n;m++)
 { 
-int a,i,j,c=0; 
-scanf("%d",&a); 
-char str[a]; 
-scanf("%s",str); 
-for(i=0;i<a;i++) 
+int n; 
+scanf("%d",&n); 
+while(n--) 
 {
- for(j=i;j<a;j++)
+ int m,i,j; 
+scanf("%d",&m); 
+char ar[m];
+ scanf("%s",ar); 
+int c=0;
+ for(i=0;i<m;i++)
  { 
- 
-if(str[i]=='1' && str[j]=='1') 
-{ 
+for(j=i;j<m;j++)
+ { 
+if(ar[i]=='1' && ar[j]=='1')
+ { 
 c++;
- } 
-} 
-}
- printf("%d
-",c);
-}
  }
+ }
+ } 
+printf("%d
+",c);
+ }
+}
