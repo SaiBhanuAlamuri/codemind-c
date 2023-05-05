@@ -22,3 +22,4 @@ printf("%d ",i);
  printf("The Number Series is Not Possible Print");
  }
  }
+
