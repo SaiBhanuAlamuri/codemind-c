@@ -1,16 +1,35 @@
 #include<stdio.h>
-int main(){
-    int n,i,s=0;
-    scanf("%d",&n);
-    int a[n];
-    for(i=0;i<n;i++){
-        scanf("%d",&a[i]);
+int abst(int m,int n)
+{
+    if(m>n)
+    {
+        return m-n;
+        
     }
-    for(i=0;i<n;i++){
-        if(i%2!=0){
-            s=s+a[i];
-        }
+    else
+    {
+        return n-m;
     }
-    printf("%d",s);
-
+}
+int main()
+{
+int n,i;
+scanf("%d",&n);
+int a[100];
+for (i=0;i<n;i++)
+{
+    scanf("%d",&a[i]);
+    
+}
+int e=0;
+for(i=0;i<n;i++)
+{
+    if(i%2!=0)
+    {
+        e=e+a[i];
+        
+    }
+    
+}
+printf("%d",e);
 }
