@@ -4,10 +4,12 @@ int prime(int n)
     int c=0,flag=0,i;
     for(i=1;i<=n;i++)
     {
-        if(n%i==0)
-        {
-            c=c+1;
-        }
+	if(n%i==0)
+    	{
+		
+        c=c+1;
+    }
+    
     }
     if(c==2)
     {
@@ -21,7 +23,7 @@ int prime(int n)
 }
 int main()
 {
-    int n,i,j,p1,p2,c;
+    int n,i,j,p,q,c=0;
     scanf("%d",&n);
     for(i=2;i<=10000;i++)
     {
@@ -31,24 +33,19 @@ int main()
             {
                 if(prime(i)==1 && prime(j)==1)
                 {
-              
-                    p1=i;
-                    p2=j;
+                    p=i;
+                    q=j;
                     c=1;
-                    break;
-                    
-                
+                }
             }
         }
     }
-    }
     if(c==1)
     {
-        printf("%d %d",p2,p1);
-    }
-    else
-    {
-        printf("-1");
-    }
-    
+    	printf("%d %d",q,p);
+	}
+	else
+	{
+		printf("-1");
+	}
 }
