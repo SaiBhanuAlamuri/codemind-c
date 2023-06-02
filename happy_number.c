@@ -2,8 +2,8 @@
 #include<math.h>
 int fun(int n)
 {
-    int s=0,r,res;
-    while(1)
+    int r,s=0,f=0;
+    while(1>0)
     {
         s=0;
         while(n!=0)
@@ -16,6 +16,7 @@ int fun(int n)
         {
             n=s;
             continue;
+            
         }
         else
         {
@@ -24,23 +25,16 @@ int fun(int n)
     }
     if(s==1 || s==7)
     {
-        n=s;
-        res=1;
-        
+        f=1;
     }
-    else
-    {
-        res=0;
-    }
-    return res;
+    return f;
 }
 int main()
 {
-    int n;
+    int n,res;
     scanf("%d",&n);
-    int resi;
-    resi=fun(n);
-    if(resi==1)
+    res=fun(n);
+    if(res==1)
     {
         printf("True");
     }
