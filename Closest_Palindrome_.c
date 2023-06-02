@@ -1,51 +1,55 @@
 #include<stdio.h>
-int reve(int n)
+int pal(int n)
 {
-    int r=0;
-    int rev=0;
+    int x=n;
+    int r=0,rev=0,f=0;
     while(n!=0)
     {
         r=n%10;
         rev=rev*10+r;
         n=n/10;
     }
-    return rev;
+    if (x==rev)
+    {
+        f=1;
+    }
+    return f;
 }
 int main()
 {
-    int a,i,f,l,df,dl;
-    scanf("%d",&a);
-    for(i=a-1;i>0;i--)
+    int n,i;
+    int f=0,l=0,df=0,dl=0;
+    scanf("%d",&n);
+    for(i=n-1;i>=0;i--)
     {
-        if(reve(i)==i)
+        if(pal(i)==1)
         {
             f=i;
             break;
         }
+        
     }
-    for(i=a+1;i<=10000;i++)
+    for(i=n+1;i<=10000;i++)
     {
-        if(reve(i)==i)
+        if(pal(i)==1)
         {
             l=i;
             break;
         }
     }
-    df=a-f;
-    dl=l-a;
-    if(df==dl)
-    {
-        printf("%d %d",f,l);
-    }
-    else if(df>dl)
+    df=n-f;
+    dl=l-n;
+    if(df>dl)
     {
         printf("%d",l);
+    }
+    else if(df==dl)
+    {
+        printf("%d %d",f,l);
     }
     else
     {
         printf("%d",f);
-        
     }
-    return 0;
     
 }
