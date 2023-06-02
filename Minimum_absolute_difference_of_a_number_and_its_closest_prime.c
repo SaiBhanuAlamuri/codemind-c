@@ -1,30 +1,26 @@
 #include<stdio.h>
 int prime(int n)
 {
-    int c=0,flag=0,i;
+    int i,c=0,f=0;
     for(i=1;i<=n;i++)
     {
         if(n%i==0)
         {
             c=c+1;
+            
         }
     }
     if(c==2)
     {
-        flag=1;
+        f=1;
     }
-    else
-    {
-        flag=0;
-    }
-    return flag;
+    return f;
 }
-
 int main()
 {
-    int n,f=0,l=0,df=0,dl=0,i;
+    int n,i,f=0,l=0,df=0,dl=0;
     scanf("%d",&n);
-    for(i=n-1;i>=0;i--)
+    for(i=n;i>=0;i--)
     {
         if(prime(i)==1)
         {
@@ -32,31 +28,22 @@ int main()
             break;
         }
     }
-    for(i=n;i<=10000;i++)
+    for(i=n+1;i<10000;i++)
     {
         if(prime(i)==1)
         {
             l=i;
             break;
         }
-        
     }
     df=n-f;
     dl=l-n;
-    if(df==dl)
+    if(df>dl)
     {
         printf("%d",dl);
-    }
-    else if(df>dl)
-    {
-        printf("%d",dl);
-        
     }
     else
     {
         printf("%d",df);
     }
-    
-    
-    
 }
