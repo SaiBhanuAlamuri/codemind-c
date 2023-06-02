@@ -1,29 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int n,r=0,s=0,x=0,d=0,rev=0;
+    int n,r,rev=0,d=0,c=0,b=0;
     scanf("%d",&n);
     while(n!=0)
     {
-        s=n%10;
-        r=r*10+s;
+        r=n%10;
+        rev=rev*10+r;
         n=n/10;
     }
-    while(r!=0)
+    while(rev!=0)
     {
-        x=r%10;
-        r=r/10;
+        b=rev%10;
         if(d<1)
         {
-            if(x==6)
+            if(b==6)
             {
-                x=9;
+                b=9;
                 d=1;
             }
         }
-        rev=rev*10+x;
-        
-        
+        c=c*10+b;
+        rev=rev/10;
     }
-    printf("%d",rev);
+    printf("%d",c);
+    
 }
