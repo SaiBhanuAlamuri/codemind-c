@@ -1,7 +1,7 @@
 #include<stdio.h>
 int prime(int n)
 {
-    int c=0,flag=0,i;
+    int c=0,f=0,i;
     for(i=1;i<=n;i++)
     {
         if(n%i==0)
@@ -11,21 +11,18 @@ int prime(int n)
     }
     if(c==2)
     {
-        flag=1;
+        f=1;
+        
     }
-    else
-    {
-        flag=0;
-    }
-   return flag; 
+    return f;
 }
 int main()
 {
-    int t,i,f,l,df,dl;
+    int t;
     scanf("%d",&t);
     while(t--)
     {
-        int n;
+        int n,i,f=0,l=0,dl=0,df=0;
         scanf("%d",&n);
         for(i=n-1;i>=0;i--)
         {
@@ -35,7 +32,7 @@ int main()
                 break;
             }
         }
-        for(i=n;i<=1000;i++)
+        for(i=n;i<=100000;i++)
         {
             if(prime(i)==1)
             {
@@ -47,25 +44,19 @@ int main()
         dl=l-n;
         if(df>dl)
         {
-            printf("%d",l);
+            printf("%d
+",l);
         }
         else if(dl>df)
         {
-            printf("%d",f);
+            printf("%d
+",f);
         }
         else
         {
-            if(l>f)
-            {
-                printf("%d",f);
-            }
-            else
-            {
-                printf("%d",l);
-            }
+            printf("%d
+",f);
         }
-        printf("
-");
+        
     }
-    
 }
