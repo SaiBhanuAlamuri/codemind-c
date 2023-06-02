@@ -1,28 +1,23 @@
 #include<stdio.h>
 int prime(int n)
 {
-    int c=0,i,flag=0;
+    int c=0,f=0,i;
     for(i=1;i<=n;i++)
     {
         if(n%i==0)
         {
             c=c+1;
         }
-        
     }
     if(c==2)
     {
-        flag=1;
+        f=1;
     }
-    else
-    {
-        flag=0;
-    }
-    return flag;
+    return f;
 }
 int main()
 {
-    int n,i,c=0;
+    int n,c=0,i;
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
@@ -35,5 +30,4 @@ int main()
         }
     }
     printf("%d",c);
-    
 }
