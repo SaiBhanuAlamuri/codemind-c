@@ -1,34 +1,50 @@
 #include<stdio.h>
 #include<math.h>
-int main(){ 
-int n,r,s=0,t,c=1,i,p=1;
- scanf("%d",&n); 
-t=n;
- while(t!=0)
- {
- r=t%10;
- s=s*10+r;
- t=t/10;
- } 
-t=s; s=0; 
-while(t!=0)
- { 
-r=t%10;
- for(i=1;i<=c;i++) 
+int pa(int n,int x)
 {
- p=p*r;
- }
- s=s+p;
- t=t/10; 
-c++;
- p=1;
- }
- if(s==n) 
-{ 
-printf("True"); 
-} 
-else
- {
- printf("False");
- }
+    int p,i;
+    p=n;
+    for(i=1;i<x;i++)
+    {
+        p=p*n;
+    }
+    return p;
 }
+int count(int n)
+{
+    int r=0,d=0;
+    while(n!=0)
+    {
+        r=n%10;
+        d=d+1;
+        n=n/10;
+    }
+    return d;
+}
+int main()
+{
+    int n,s=0,dc=0,r=0;
+    scanf("%d",&n);
+    int x=n;
+    dc=count(n);
+    
+    while(n!=0)
+    {
+        r=n%10;
+        s=s+pa(r,dc);
+        dc=dc-1;
+        n=n/10;
+        
+    }
+    
+    if(s==x)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
+
+   
